@@ -1,4 +1,4 @@
-package pl.hordyjewiczmichal;
+package com.sample.tomcat.filter;
 
 import org.junit.Before;
 import org.junit.Test;

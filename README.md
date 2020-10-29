@@ -9,7 +9,7 @@ Add custom headers easily to your Tomcat response using param-name and param-val
     ```xml
     <filter>
         <filter-name>ResponseHeaderFilter</filter-name>
-        <filter-class>pl.hordyjewiczmichal.ResponseHeaderFilter</filter-class>
+        <filter-class>com.sample.tomcat.filter.ResponseHeaderFilter</filter-class>
         <init-param>
             <param-name>Your-Header-1</param-name> <!-- put your any header name -->
             <param-value>

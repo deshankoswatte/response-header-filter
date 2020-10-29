@@ -1,4 +1,4 @@
-package pl.hordyjewiczmichal;
+package com.sample.tomcat.filter;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletResponse;
