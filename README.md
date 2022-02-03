@@ -2,7 +2,7 @@
 Add custom headers easily to your Tomcat response using param-name and param-value tags in web.xml
 
 ## Installation
-* Download latest release (.jar file)
+* Download latest release (.jar file) or build the component using maven `mvn clean install`
 * Put `response-header-filter.jar` in your `$CATALINA_HOME/lib` directory
 * Edit your `web.xml` located in `$CATALINA_HOME/conf`
 * Add the following filter and filter mapping inside `<web-app>` tag:
