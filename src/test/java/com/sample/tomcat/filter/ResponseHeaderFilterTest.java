@@ -89,7 +89,7 @@ public class ResponseHeaderFilterTest
         filter.doFilter(req, resp, chain);
 
         // then
-        Mockito.verify(resp, times(5)).addHeader(Mockito.any(), Mockito.any());
+        Mockito.verify(resp, times(5)).addHeader(Mockito.anyString(), Mockito.anyString());
         Mockito.verify(resp, times(1)).addHeader("x-header-1", "value1");
         Mockito.verify(resp, times(1)).addHeader("x-header-1", "value2");
         Mockito.verify(resp, times(1)).addHeader("x-header-2", "value3");

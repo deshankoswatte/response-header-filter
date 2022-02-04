@@ -54,9 +54,16 @@ public class ResponseHeaderFilter implements Filter
         HttpServletResponse response = (HttpServletResponse) resp;
         Set<String> headerNames = this.getHeaders().keySet();
 
-        headerNames.forEach(headerName ->
-                this.getHeaders().get(headerName).forEach(val ->
-                        response.addHeader(headerName, val)));
+        for (String headerName : headerNames) {
+            List<String> tempHeaders = this.getHeaders().get(headerName);
+            for (String tempHeader: tempHeaders) {
+                response.addHeader(headerName, tempHeader);
+            }
+        }
+//
+//        headerNames.forEach(headerName ->
+//                this.getHeaders().get(headerName).forEach(val ->
+//                        response.addHeader(headerName, val)));
 
         chain.doFilter(req, resp);
     }
